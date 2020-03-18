@@ -26,6 +26,21 @@
 					case 'h':
 						$site -> index();
 					break;
+
+					case 'c':
+						require_once("controllers/clienteController.php");
+						$cliente = new clienteController();
+
+						if(!isset($_GET['a'])) {
+							$cliente -> index();
+						} else {
+							switch($_REQUEST['a']) {
+								case 'cc': $cliente -> formCadastro();
+								break;
+								case 'cca': $cliente -> cadastroCliente();
+							break;
+							}
+						}
 				}
 			break;
 		}

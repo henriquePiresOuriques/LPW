@@ -35,5 +35,7 @@
 			<a href="?c=s&a=p">Produtos</a><br>
 			<a href="?c=s&a=c">Contato</a><br>
 			<a href="?c=s&a=s">Sobre</a><br>
+			<h5>Clientes</h5>
+			<a href="?c=c&a=cc">Cadastro</a>
         </nav>
         <section class="col-md-9">
