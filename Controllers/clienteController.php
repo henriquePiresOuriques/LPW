@@ -1,11 +1,9 @@
 <?php 
 
-require_once('models/clientesModel.php');
-
 class clientesController {
     function formCadastro() {
         require_once('views/templates/header.php');
-        require_once('views/clientes/formCadastro.php');
+        require_once('views/client/formCadastro.php');
         require_once('views/templates/footer.php');
     }
 
@@ -18,14 +16,26 @@ class clientesController {
         );
 
         require_once('views/templates/header.php');
-        require_once('views/clientes/cadastroCliente.php');
+        require_once('views/client/cadastroCliente.php');
         require_once('views/templates/footer.php');
         
     }
 
-    public function index() {
-        $resultado = $this->model->lista();
-        $this->templateData('views/pages/clientes/listaCliente.php', $resultado);
+    public function listaClientes() {
+        require_once("models/clientesModel.php");
+        $cliente = new clientesModel();
+        $cliente -> listaClientes();
+        $resultado = $cliente -> getConsulta();
+
+        $arrayClientes = array();
+
+        while($linha = $resultado->fetch_assoc()){
+            array_push($arrayClientes, $linha);
+        }
+
+        require_once('views/templates/header.php');
+        require_once('views/client/listaCliente.php');
+        require_once('views/templates/footer.php');
     }
 }
 ?>

@@ -36,6 +36,7 @@
 			<a href="?c=s&a=c">Contato</a><br>
 			<a href="?c=s&a=s">Sobre</a><br>
 			<h5>Clientes</h5>
-			<a href="?c=c&a=cc">Cadastro</a>
+			<a href="?c=c&a=cc">Cadastro</a><br>
+			<a href="?c=c&a=lc">Lista</a>
         </nav>
         <section class="col-md-9">

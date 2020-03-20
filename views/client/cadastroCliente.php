@@ -16,8 +16,5 @@
         <td>TA:</td>
         <td><?= $cliente['ta'];?></td>
     </tr>
-    <tr>
-        <td>Nome:</td>
-        <td><?= $cliente['nome'];?></td>
-    </tr>
+   
 </table>

@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	
 	if(!isset($_GET['c'])) {
 		require_once('Controllers/siteController.php');
@@ -26,22 +27,25 @@
 					case 'h':
 						$site -> index();
 					break;
-
+				}
+			break;
 					case 'c':
 						require_once("controllers/clienteController.php");
-						$cliente = new clienteController();
+						$cliente = new clientesController();
 
 						if(!isset($_GET['a'])) {
-							$cliente -> index();
+							//$cliente -> index();
 						} else {
 							switch($_REQUEST['a']) {
 								case 'cc': $cliente -> formCadastro();
 								break;
 								case 'cca': $cliente -> cadastroCliente();
-							break;
+								break;
+								case 'lc': $cliente -> listaClientes();
+								break;
 							}
 						}
-				}
+				
 			break;
 		}
 	}

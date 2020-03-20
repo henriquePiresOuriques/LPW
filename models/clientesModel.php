@@ -1,19 +1,19 @@
 <?php 
-    require_once()
+    class clientesModel {
+        var $resultado;
+        
+        public function listaClientes() {
+            require_once("db/conexaoClass.php");
 
-    class clientesModel{
-        public function lista() {
-            $sql = "SELECT * FROM clientes";
-            $resultado = $conn->query($sql);
+            $Oconn = new connectClass();
+            $Oconn -> openConnect();
+            $conn = $Oconn -> getconn();
+            $sql = 'SELECT * FROM clientes';
+            $this -> resultado = $conn -> query($sql);
+        }    
 
-            $arrayClientes = array();
-            if($resultado-> num_rows > 0) {
-                while($linha = $resultado->fetch_assoc()) {
-                    array_push($arrayClientes, $linha);
-                }
-            } else {
-                echo "0 results";
-            }
-                }
+        public function getConsulta() {
+            return $this -> resultado;
+        }
     }
 ?>
