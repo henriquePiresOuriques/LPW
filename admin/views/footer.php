@@ -6,7 +6,7 @@
 		<footer class="col-md-12">
 
 			Texto rodapé<br>
-			<a href="admin/index.php">Admin</a>
+			
 		</footer>
 
 	</div>
