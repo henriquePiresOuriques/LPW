@@ -47,6 +47,10 @@
 					switch($_REQUEST['a']) {
 						case 'lc': $Client -> listClients();
 						break;
+						case 'ac': $Client -> insertClientForm();
+						break;
+						case 'ic' : $Client -> insertClient(); 
+						break;
 					}
 				}
 			break;

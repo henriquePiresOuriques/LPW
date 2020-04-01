@@ -33,5 +33,7 @@
 
 			<a href="?c=m&a=i">Home</a><br>
 			<a href="?c=c&a=lc">Lista Clientes</a><br>
+			<a href="?c=c&a=ac">Adicionar Cliente</a><br>
+			
         </nav>
         <section class="col-md-9">
