@@ -43,6 +43,36 @@ class clientsController {
 
         $this -> listClients();
     }
+
+    public function updateClientForm ($id_cliente) {
+        $clientModel = new clientsModel();
+        $clientModel -> consultClient($id_cliente);
+        $result = $clientModel -> getConsult();
+
+        if ($arrayClient = $result -> fetch_assoc()) {
+            require_once("views/header.php");
+            require_once("views/clients/alteraClients.php");
+            require_once("views/footer.php");
+        }
+    }
+
+    public function updateClient() {
+        $arrayClient["id_cliente"] = $_POST["id_cliente"];
+        $arrayClient["nome"]       = $_POST["nome"];
+        $arrayClient["email"]      = $_POST["email"];
+        $arrayClient["telefone"]   = $_POST["telefone"];
+        $arrayClient["endereco"]   = $_POST["endereco"];
+
+        $clientModel =  new clientsModel();
+        $clientModel -> updateClient($arrayClient);
+        $this -> listClients();
+    }
+
+    public function deleteClient($id_cliente) {
+        $clientModel = new clientsModel();
+        $clientModel -> deleteClient($id_cliente);
+        $this -> listClients();
+    }
         
 }
 ?>

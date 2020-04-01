@@ -51,6 +51,12 @@
 						break;
 						case 'ic' : $Client -> insertClient(); 
 						break;
+						case 'alc': $id_cliente=$_GET['id']; $Client -> updateClientForm($id_cliente);
+						break;
+						case 'uc': $Client -> updateClient();
+						break;
+						case 'dc': $id_cliente=$_GET['id']; $Client -> deleteClient($id_cliente);
+						break;
 					}
 				}
 			break;

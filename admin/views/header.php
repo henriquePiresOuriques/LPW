@@ -22,7 +22,8 @@
 <div class="container-fluid">
 	<div class="row">
 		<header class="col-lg-12">
-			<h1>Texto de cabeçalho</h1>
+			<h1>Área Administrativa</h1>
+			<a id="sair" href="?c=m&a=sd">Sair</a>
 		</header>
 
 	</div>
@@ -33,7 +34,6 @@
 
 			<a href="?c=m&a=i">Home</a><br>
 			<a href="?c=c&a=lc">Lista Clientes</a><br>
-			<a href="?c=c&a=ac">Adicionar Cliente</a><br>
-			
+			<a href="?c=c&a=ac">Adicionar Cliente</a><br>		
         </nav>
         <section class="col-md-9">
