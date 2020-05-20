@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 
 <!-- nossos scripts de css e js-->
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href=".../assets/css/style.css">
 
 
 <!-- scripts do BS ou framework de escolha-->

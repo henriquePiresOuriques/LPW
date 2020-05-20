@@ -1,6 +1,6 @@
 <h2>Cadastro do Cliente</h2>
 
-<form method="POST" action="?c=c&a=ic">
+<form method="POST" action="?c=c&a=ic" enctype="multipart/form-data">
 	
 	<div class="form-group">
 		<div>
@@ -18,6 +18,11 @@
 		<div>
 			<label form="endereco">Endereço:</label>
 			<input type="text" class="form-control" name="endereco">
+		</div>
+		<br>
+		<div class="form-group">
+			<label form="img">Foto:</label>
+			<input type="file" class="form-control col-md-4" name="photo" size="40">
 		</div>
 		<br>
 		<button type="submit" class="btn btn-default">Salvar</button>

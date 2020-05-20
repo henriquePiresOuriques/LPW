@@ -23,7 +23,14 @@
 			<label form="endereco">Endereço:</label>
 			<input type="text" class="form-control" name="endereco" value="<?= $arrayClient['endereco'] ?>">
 		</div>
-
+		<br>
+		<div>
+			<label for="photo">Foto: (selecione uma imagem apenas se quiser alterar)</label>
+			<input type="fule" class="form-control" name="photo">
+		</div>
+		<div>
+			<img style="max-width: 100px;max-height: 100px" src="assets/img/clients<?=$arrayClient["id_cliente"]?>.jpg">
+		</div>
 		<br>
 		<button type="submit" class="btn btn-default">Salvar</button>
 

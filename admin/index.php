@@ -57,6 +57,14 @@
 						break;
 						case 'dc': $id_cliente=$_GET['id']; $Client -> deleteClient($id_cliente);
 						break;
+						case 'lfc': $id_cliente=$_GET['id']; $Client -> ListFilesClient($id_cliente); 
+						break;
+						case 'ufc': $id_cliente=$_GET['id']; $Client -> UploadFilesClient($id_cliente);
+						break;
+						case 'ufca': $id_cliente=$_GET['id']; $Client -> uploadFilesClientAction($id_cliente);
+						break;
+						case 'dfc': $id_cliente=$_GET['id']; $Client -> deleteFileClients($id_cliente);
+						break;
 					}
 				}
 			break;
